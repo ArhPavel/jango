@@ -1,13 +1,10 @@
 from django.urls import path
-from catalog.apps import CatalogConfig
-from catalog.views import home, contacts
+from . import views
 
-app_name = CatalogConfig.name
+
+app_name = 'catalog'
 
 urlpatterns = [
-    # Главная страница (Каталог)
-    path('', home, name='index'),
-
-    # Страница контактов
-    path('contacts/', contacts, name='contacts'),
+    # Главная страница приложения catalog (пока свяжем с пустой функцией/представлением)
+    # path('', views.home, name='home'),
 ]
