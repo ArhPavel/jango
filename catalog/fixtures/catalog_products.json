@@ -1,0 +1,67 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Слива",
+        "description": "Сладкая спелая слива",
+        "image": "",
+        "category": 6,
+        "price": "250.00",
+        "created_at": "2026-11-07T21:21:02.513Z",
+        "updated_at": "2026-11-07T21:21:02.513Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "Яблоко",
+        "description": "Хрустящие красные яблоки",
+        "image": "",
+        "category": 6,
+        "price": "120.50",
+        "created_at": "2026-11-07T21:21:02.515Z",
+        "updated_at": "2026-11-07T21:21:02.515Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+        "name": "Огурец",
+        "description": "Грунтовые огурцы",
+        "image": "",
+        "category": 7,
+        "price": "180.50",
+        "created_at": "2026-11-07T21:21:02.517Z",
+        "updated_at": "2026-11-07T21:21:02.517Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+        "name": "Помидор",
+        "description": "Томаты на ветке",
+        "image": "",
+        "category": 7,
+        "price": "220.00",
+        "created_at": "2026-11-07T21:21:02.519Z",
+        "updated_at": "2026-11-07T21:21:02.519Z"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+        "name": "Стиральный порошок",
+        "description": "Для белого и цветного белья",
+        "image": "",
+        "category": 8,
+        "price": "450.99",
+        "created_at": "2026-11-07T21:21:02.521Z",
+        "updated_at": "2026-11-07T21:21:02.521Z"
+    }
+}
+]

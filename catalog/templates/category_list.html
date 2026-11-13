@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Категории товаров{% endblock %}
+
+{% block content %}
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Категории товаров</h1>
+      <p class="lead text-body-secondary">Всего категорий в каталоге: {{ categories.count }}</p>
+    </div>
+  </div>
+</section>
+
+<div class="album py-5 bg-body-tertiary">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for category in categories %}
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title">{{ category.name }}</h4>
+            <p class="card-text">{{ category.description|default:"Описание отсутствует"|truncatechars:120 }}</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center pt-3">
+              <a href="{% url 'catalog:category_products' category.pk %}" class="btn btn-primary">Смотреть товары</a>
+              <small class="text-body-secondary">Товаров: {{ category.products.count }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+        <p class="text-center">Категории пока не добавлены.</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
