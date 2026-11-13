@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ product.name }}{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <a href="{% url 'catalog:category_products' product.category.pk %}" class="btn btn-outline-secondary mb-4">← Назад в категорию «{{ product.category.name }}»</a>
+    <div class="card shadow-sm">
+        <div class="row g-0">
+            <div class="col-md-5">
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" class="img-fluid rounded-start" alt="{{ product.name }}">
+                {% endif %}
+            </div>
+            <div class="col-md-7">
+                <div class="card-body">
+                    <span class="badge bg-secondary mb-2">{{ product.category.name }}</span>
+                    <h2 class="card-title">{{ product.name }}</h2>
+                    <p class="card-text">{{ product.description }}</p>
+                    <h4 class="text-primary my-3">{{ product.price }} руб.</h4>
+                    <p class="card-text"><small class="text-muted">Добавлено: {{ product.created_at|date:"d.m.Y" }}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

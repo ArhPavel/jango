@@ -1,10 +1,10 @@
 from django.urls import path
-from . import views
-
+from .views import category_list, category_products, product_detail
 
 app_name = 'catalog'
 
 urlpatterns = [
-    # Главная страница приложения catalog (пока свяжем с пустой функцией/представлением)
-    # path('', views.home, name='home'),
+    path('', category_list, name='category_list'),
+    path('category/<int:pk>/', category_products, name='category_products'),
+    path('products/<int:pk>/', product_detail, name='product_detail'),
 ]
