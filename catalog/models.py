@@ -31,6 +31,10 @@ class Product(models.Model):
     def __str__(self):
         return f'{self.name} ({self.price} руб.)'  # Короткий и понятный вывод
 
+    views_counter=models.PositiveIntegerField(default=0)
+    verbose_name = 'счётчик просмотров товара'
+    verbose_name_plural = 'укажите колличество просмотров'
+
     class Meta:
         verbose_name = 'продукт'
         verbose_name_plural = 'продукты'
